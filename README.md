@@ -5,7 +5,7 @@ Data Engineer technical assessment (order to warehouse)
 We generate the Order results columns using SQL statements and auxiliary tables in the Vertica columnar database.
 
 ## Files
-- **/sql/01 - Master tables.sql**" Master tables generation: 
+- **/sql/01 - Master tables.sql** Master tables generation: 
 	- Load Staging tables:
 		- `temp.parq_actual_stock`
 		- `temp.parq_receptions`
@@ -14,12 +14,12 @@ We generate the Order results columns using SQL statements and auxiliary tables 
 		- `temp.dim_store`
 		- `temp.dim_product`
 		- `temp.dim_date`
-- "**/sql/02 - Calculate Order.sql**" Process SQL to calculate columns *AvailableStock*, *StockNeed*, *Order*.
+- **/sql/02 - Calculate Order.sql** Process SQL to calculate columns *AvailableStock*, *StockNeed*, *Order*.
 	1. Join main tables data in `temp.ods_stock_ori`.
 	2. Calculate temp column with out of stock data in `temp.ods_stock_out`.
 	3. Calculate final columns results in `temp.ods_stock_order`.
--  "**/sql/03 - Export order_to_warehouse.parquet.sql**" Export from `temp.ods_stock_order` to parquet file result `order_to_warehouse.parquet`.
--  "**/sql/04 - Calculate Order TEST1.sql**" Test example 1.
+-  **/sql/03 - Export order_to_warehouse.parquet.sql** Export from `temp.ods_stock_order` to parquet file result `order_to_warehouse.parquet`.
+-  **/sql/04 - Calculate Order TEST1.sql** Test example 1.
 - **/data** Data output
 
 ## Enviroment
